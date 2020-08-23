@@ -1,0 +1,1 @@
+scr_inv_clothes_add_bag();
