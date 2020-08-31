@@ -77,5 +77,10 @@ function scr_set_sprite_hatless() {
 	sprite_hat[2,11] = spr_blank_32x32_25f;
 	sprite_hat[1,11] = spr_blank_32x32_25f;
 
+	//																		DRINK
+	sprite_hat[0,12] = spr_blank_32x32_25f;
+	sprite_hat[3,12] = spr_blank_32x32_25f;
+	sprite_hat[2,12] = spr_blank_32x32_25f;
+	sprite_hat[1,12] = spr_blank_32x32_25f;
 
 }

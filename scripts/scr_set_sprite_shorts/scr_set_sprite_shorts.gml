@@ -88,5 +88,11 @@ function scr_set_sprite_shorts() {
 	sprite_pants[2,11] = spr_shorts_down;
 	sprite_pants[1,11] = spr_shorts_down;
 
+//																		DRINK
+
+	sprite_pants[0,12] = spr_shorts_down;
+	sprite_pants[3,12] = spr_shorts_down;
+	sprite_pants[2,12] = spr_shorts_down;
+	sprite_pants[1,12] = spr_shorts_down;
 
 }

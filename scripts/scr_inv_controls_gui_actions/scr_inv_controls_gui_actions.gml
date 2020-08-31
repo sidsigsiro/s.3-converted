@@ -19,7 +19,7 @@ function scr_inv_controls_gui_actions() {
 		if inv_gui_select_menu = 0 {
 			var item;
 			item = inv[inv_gui_select, 2];
-			if item = scr_eat_state or item = scr_heal_state {
+			if item = scr_eat_state or item = scr_heal_state or item = scr_drink_state {
 			text_act.my_text[0] = "Use"
 			}
 		}/* might not be necessary if you can just use "Move" tp move it to an equip slot
@@ -83,7 +83,7 @@ function scr_inv_controls_gui_actions() {
 				image_index = 0;
 				script_execute(inv[item_in_use,6]); // set item sprite index
 				state = inv[item_in_use, 2];
-				state_sprite = inv[item_in_use, 1];
+				state_sprite_item = inv[item_in_use, 1];
 			} else if text_act.my_text[text_act.page] = "Equip" {
 					
 			} else if text_act.my_text[text_act.page] = "Unequip" {

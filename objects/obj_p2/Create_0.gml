@@ -25,7 +25,7 @@ state = state_default;
 state_rot = 0;
 state_rot_arm = 0;
 face = 0;
-state_sprite = noone;
+state_sprite_item = noone;
 hbox[1] = noone;
 
 is_hurt = false;

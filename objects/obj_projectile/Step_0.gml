@@ -1,7 +1,8 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-if inv[0,2] = scr_eat_state or inv[0, 2] = scr_heal_state or inv[0, 2] = scr_bow_state {
+if inv[0,2] = scr_eat_state or inv[0,2] = scr_drink_state
+or inv[0, 2] = scr_heal_state or inv[0, 2] = scr_bow_state {
 	hbox[0].stat_0 = 5;
 } else {
 	hbox[0].stat_0 = inv[0, 3] * dam_multiplier;

@@ -8,6 +8,9 @@ for(var i = 0; i <= inv_clothes_slots; i++) {
 		sprite_index = inv_clothes[i, 1] break;
 	}
 }
-	
+
+if inv[0, 8] = " (Water)" {
+	draw_sprite(inv[0,1], 2, x, y);
+}
 
 draw_self();

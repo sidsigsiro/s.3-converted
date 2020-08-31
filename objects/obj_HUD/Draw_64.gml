@@ -104,7 +104,7 @@ if instance_exists(obj_character_sheet_1) {
 			bar_size = char_sheet.water / 100;
 		} else if i == 8 {
 			bar_size = char_sheet.armour / 100;
-			bar_alpha = .8;
+			bar_alpha = 1;
 		} else if i == 9 {
 			x_offset = ((sprite_get_width(spr_hud_bars) / 100) * char_sheet.carbs) - 2;
 			if char_sheet.carbs > 0 {

@@ -34,7 +34,7 @@ state = state_default;
 state_rot = 0;
 state_rot_arm = 0;
 face = 0;
-state_sprite = noone;
+state_sprite_item = noone;
 state_sprite_item_aim = noone;
 hbox[1] = noone; // melee
 hbox[2] = noone; //shield
@@ -79,6 +79,7 @@ item_from_inv = false;
 
 
 food_sprite = noone;
+item_in_use_sprite = noone;
 
 draw_item_aim = false;
 hbox_using = noone;

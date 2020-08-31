@@ -77,5 +77,10 @@ function scr_set_sprite_hairless() {
 	sprite_hair[2,11] = spr_blank_32x32_25f;
 	sprite_hair[1,11] = spr_blank_32x32_25f;
 
+	//																		DRINK
+	sprite_hair[0,12] = spr_blank_32x32_25f;
+	sprite_hair[3,12] = spr_blank_32x32_25f;
+	sprite_hair[2,12] = spr_blank_32x32_25f;
+	sprite_hair[1,12] = spr_blank_32x32_25f;
 
 }

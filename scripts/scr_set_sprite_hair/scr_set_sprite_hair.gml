@@ -77,5 +77,10 @@ function scr_set_sprite_hair() {
 	sprite_hair[2,11] = spr_hair_walk_down;
 	sprite_hair[1,11] = spr_hair_walk_down;
 
+//																		DRINK
+	sprite_hair[0,12] = spr_hair_walk_down;
+	sprite_hair[3,12] = spr_hair_walk_down;
+	sprite_hair[2,12] = spr_hair_walk_down;
+	sprite_hair[1,12] = spr_hair_walk_down;
 
 }

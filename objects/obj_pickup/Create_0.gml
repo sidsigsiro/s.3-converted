@@ -3,3 +3,4 @@
 scr_inv_create(1);
 scr_inv_clothes_create();
 scr_inv_equip_create_full();
+image_speed = 0;

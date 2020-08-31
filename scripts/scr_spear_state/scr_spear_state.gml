@@ -74,7 +74,7 @@ function scr_spear_state() {
 	if image_index >= 1 {
 		if hbox[1] = noone {
 			spd = 2;
-			scr_create_hbox(x + xdir, y + ydir, sprite_get_width(state_sprite), sprite_get_height(state_sprite), scr_hbox_hit, 1);
+			scr_create_hbox(x + xdir, y + ydir, sprite_get_width(state_sprite_item), sprite_get_height(state_sprite_item), scr_hbox_hit, 1);
 			hbox[1].image_angle = aim;
 			hbox[1].owner = id;
 			hbox[1].stat_0 = inv_equip[item_in_use, 3]

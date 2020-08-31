@@ -59,7 +59,7 @@ function scr_shield_state() {
 	hbox[0].hbox_active = false;
 
 	if hbox[2] = noone {
-		scr_create_hbox(x + xdir, y + ydir, sprite_get_width(state_sprite), sprite_get_height(state_sprite), scr_hbox_shield_parry, 2);
+		scr_create_hbox(x + xdir, y + ydir, sprite_get_width(state_sprite_item), sprite_get_height(state_sprite_item), scr_hbox_shield_parry, 2);
 		hbox[2].image_angle = face_mod;
 		hbox[2].alarm[1] = 5;
 	}

@@ -73,9 +73,11 @@ function scr_eat_state() {
 		}
 	
 		var item_to_delete = item_in_use;
-		//for (var i = 0; i <= global.inv_properties; i++) {
-			//inv_equip[item_to_delete, i] = noone;
-		//}
+		if item_from_inv = false {
+			scr_item_equip_delete(item_to_delete);
+		} else {
+			scr_item_delete(item_to_delete);
+		}
 	}
 
 	if alarm[0] == 0 {

@@ -921,5 +921,81 @@ function scr_set_sprite_exil() {
 	sprite_arm_bot[1,11] = spr_blank_32x32_25f;
 	//
 
+//																		DRINK
+
+	sprite_arrow_held[0,12] = spr_blank_32x32_25f;
+	sprite_arrow_held[3,12] = spr_blank_32x32_25f;
+	sprite_arrow_held[2,12] = spr_blank_32x32_25f;
+	sprite_arrow_held[1,12] = spr_blank_32x32_25f;
+
+	sprite_arrow_bot[0,12] = spr_blank_32x32_25f;
+	sprite_arrow_bot[3,12] = spr_blank_32x32_25f;
+	sprite_arrow_bot[2,12] = spr_blank_32x32_25f;
+	sprite_arrow_bot[1,12] = spr_blank_32x32_25f;
+
+	sprite_item_top[0,12] = spr_blank_32x32_25f;
+	sprite_item_top[3,12] = spr_blank_32x32_25f;
+	sprite_item_top[2,12]= spr_blank_32x32_25f;
+	sprite_item_top[1,12] = spr_blank_32x32_25f
+
+	sprite_eyes[0,12] = spr_exil_eat_eyes;
+	sprite_eyes[3,12] = spr_exil_eat_eyes;
+	sprite_eyes[2,12] = spr_exil_eat_eyes;
+	sprite_eyes[1,12] = spr_exil_eat_eyes;
+
+	sprite_head_top[0,12] = spr_exil_walk_down_head_top;
+	sprite_head_top[3,12] = spr_exil_walk_down_head_top;
+	sprite_head_top[2,12] = spr_exil_walk_down_head_top;
+	sprite_head_top[1,12] = spr_exil_walk_down_head_top;
+
+	sprite_arm_top[0,12] = spr_exil_drink_arm_top;
+	sprite_arm_top[3,12] = spr_exil_drink_arm_top;
+	sprite_arm_top[2,12] = spr_exil_drink_arm_top;
+	sprite_arm_top[1,12] = spr_exil_drink_arm_top;
+
+	sprite_item_held[0,12] = spr_blank_32x32_25f;
+	sprite_item_held[3,12] = spr_blank_32x32_25f;
+	sprite_item_held[2,12] = spr_blank_32x32_25f;
+	sprite_item_held[1,12] = spr_blank_32x32_25f;
+
+	sprite_chest[0,12] = spr_exil_walk_down_chest;
+	sprite_chest[3,12] = spr_exil_walk_down_chest;
+	sprite_chest[2,12] = spr_exil_walk_down_chest;
+	sprite_chest[1,12] = spr_exil_walk_down_chest;
+
+	sprite_leg_top[0,12] = spr_exil_stand_down;
+	sprite_leg_top[3,12] = spr_exil_stand_down;
+	sprite_leg_top[2,12] = spr_exil_stand_down;
+	sprite_leg_top[1,12] = spr_exil_stand_down;
+
+	sprite_pelvis[0,12] = spr_exil_walk_down_pelvis;
+	sprite_pelvis[3,12] = spr_exil_walk_down_pelvis;
+	sprite_pelvis[2,12] = spr_exil_walk_down_pelvis;
+	sprite_pelvis[1,12] = spr_exil_walk_down_pelvis;
+
+	sprite_head_bot[0,12] = spr_blank_32x32_25f;
+	sprite_head_bot[3,12] = spr_blank_32x32_25f;
+	sprite_head_bot[2,12] = spr_blank_32x32_25f;
+	sprite_head_bot[1,12] = spr_blank_32x32_25f
+
+	sprite_item_mid[0,12] = spr_blank_32x32_25f;
+	sprite_item_mid[3,12] = spr_blank_32x32_25f;
+	sprite_item_mid[2,12] = spr_blank_32x32_25f
+	sprite_item_mid[1,12] = spr_blank_32x32_25f;
+
+	sprite_leg_bot[0,12] = spr_blank_32x32_25f;
+	sprite_leg_bot[3,12] = spr_blank_32x32_25f;
+	sprite_leg_bot[2,12] = spr_blank_32x32_25f;
+	sprite_leg_bot[1,12] = spr_blank_32x32_25f;
+
+	sprite_item_bot[0,12] = spr_blank_32x32_25f;
+	sprite_item_bot[3,12] = spr_blank_32x32_25f
+	sprite_item_bot[2,12] = spr_blank_32x32_25f;
+	sprite_item_bot[1,12] = spr_blank_32x32_25f;
+
+	sprite_arm_bot[0,12] = spr_blank_32x32_25f;
+	sprite_arm_bot[3,12] = spr_blank_32x32_25f;
+	sprite_arm_bot[2,12] = spr_blank_32x32_25f;
+	sprite_arm_bot[1,12] = spr_blank_32x32_25f;
 
 }

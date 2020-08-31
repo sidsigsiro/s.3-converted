@@ -43,7 +43,7 @@ function scr_interact() {
 				}
 				alarm[2] = -1;
 			} else if collision_circle(x, y, 25, obj_Container, false,true) {
-				interact_target = collision_circle(x, y, 25, obj_chest, false,true);
+				interact_target = collision_circle(x, y, 25, obj_Container, false,true);
 				if carried_object == noone {
 					carried_object = interact_target;
 					carried_object.carrier = id;
@@ -60,7 +60,7 @@ function scr_interact() {
 		}
 		if alarm[2] = 0 {
 			if collision_circle(x, y, 25, obj_Container, false,true) {
-				interact_target = collision_circle(x, y, 25, obj_chest, false,true);
+				interact_target = collision_circle(x, y, 25, obj_Container, false,true);
 				with(interact_target) {
 					scr_inv_item_drop_all();
 				}

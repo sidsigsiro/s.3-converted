@@ -1,1 +1,1 @@
-scr_inv_item_add_spear();
+scr_inv_item_add_avacodo();

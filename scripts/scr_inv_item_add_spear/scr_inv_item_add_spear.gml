@@ -24,9 +24,7 @@ function scr_inv_item_add_spear() {
 			item_param_8 = noone,
 			item_param_9 = noone,
 			item_param_10 = noone;
-
-
-
+		
 
 	///check inventory slots and adds one to empty slot
 	if inv_equip[0,0] = noone {

@@ -14,13 +14,13 @@ function scr_inv_item_add_mango() {
 	///@arg inv[0, 6]
 
 	var item_param_0 = "Mango", //name
-			item_param_1 = spr_yellow_stone_fruit, //sprite
+			item_param_1 = spr_mango, //sprite
 			item_param_2 = scr_eat_state, //state
-			item_param_3 = 50, //stat A (carbs / stam bonus) daily value % x 3 (three meals a day gehehe)
-			item_param_4 = 50, //stat B (fats / health bonus)
-			item_param_5 = 50, // stat c (proteins / )
+			item_param_3 = 51, //stat A (carbs / stam bonus) daily value % x 3 (three meals a day gehehe)
+			item_param_4 = 6, //stat B (fats / health bonus)
+			item_param_5 = 18, // stat c (proteins / )
 			item_param_6 = scr_set_sprite_inventory_heal_stone, //sprite set script
-			item_param_7 = 50, //water
+			item_param_7 = 10, //water
 			item_param_8 = noone,
 			item_param_9 = noone,
 			item_param_10 = noone; //quantity

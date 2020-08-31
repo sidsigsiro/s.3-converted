@@ -77,5 +77,10 @@ function scr_set_sprite_bagless() {
 	sprite_bag[2,11] = spr_blank_32x32_25f;
 	sprite_bag[1,11] = spr_blank_32x32_25f;
 
+//																		DRINK
+	sprite_bag[0,12] = spr_blank_32x32_25f;
+	sprite_bag[3,12] = spr_blank_32x32_25f;
+	sprite_bag[2,12] = spr_blank_32x32_25f;
+	sprite_bag[1,12] = spr_blank_32x32_25f;
 
 }

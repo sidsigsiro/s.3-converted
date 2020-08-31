@@ -140,6 +140,15 @@ function scr_set_sprite_shirtless() {
 	sprite_shirt[1,11] = spr_blank_32x32_25f;
 
 
+	//																		DRINK
+	sprite_shirt_arm_top[0,12] = spr_blank_32x32_25f;
+	sprite_shirt_arm_top[3,12] = spr_blank_32x32_25f;
+	sprite_shirt_arm_top[2,12] = spr_blank_32x32_25f;
+	sprite_shirt_arm_top[1,12] = spr_blank_32x32_25f;
 
+	sprite_shirt[0,12] = spr_blank_32x32_25f;
+	sprite_shirt[3,12] = spr_blank_32x32_25f;
+	sprite_shirt[2,12] = spr_blank_32x32_25f;
+	sprite_shirt[1,12] = spr_blank_32x32_25f;
 
 }

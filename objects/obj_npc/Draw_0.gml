@@ -109,7 +109,7 @@ if state_charge_max > 0 {
 }*/
 
 
-//if draw_gui_inv = true {
+if draw_gui_inv = true {
 	var sprite_GUI = spr_inventory_GUI;
 	
 	draw_sprite(spr_inventory_GUI, 0, inv_x, inv_y);
@@ -179,7 +179,7 @@ if state_charge_max > 0 {
 	if sprite_gui_item_icon != noone {
 		draw_sprite(sprite_gui_item_icon, 0, inv_x, inv_y);
 	}
-//}
+}
 	///WHEN ANIMATING
 	//set sprite number of each state of character
 	//set state of character

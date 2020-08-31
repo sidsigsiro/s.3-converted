@@ -76,6 +76,12 @@ function scr_set_sprite_bandana() {
 	sprite_hat[3,11] = spr_bandana_walk_down;
 	sprite_hat[2,11] = spr_bandana_walk_down;
 	sprite_hat[1,11] = spr_bandana_walk_down;
+	
+	//																		DRINK
+	sprite_hat[0,12] = spr_bandana_walk_down;
+	sprite_hat[3,12] = spr_bandana_walk_down;
+	sprite_hat[2,12] = spr_bandana_walk_down;
+	sprite_hat[1,12] = spr_bandana_walk_down;
 
 
 }

@@ -139,5 +139,15 @@ function scr_set_sprite_pantless() {
 	sprite_pants[2,11] = spr_blank_32x32_25f;
 	sprite_pants[1,11] = spr_blank_32x32_25f;
 
+	//																		DRINK
+	sprite_pants_arm_top[0,12] = spr_blank_32x32_25f;
+	sprite_pants_arm_top[3,12] = spr_blank_32x32_25f;
+	sprite_pants_arm_top[2,12] = spr_blank_32x32_25f;
+	sprite_pants_arm_top[1,12] = spr_blank_32x32_25f;
+
+	sprite_pants[0,12] = spr_blank_32x32_25f;
+	sprite_pants[3,12] = spr_blank_32x32_25f;
+	sprite_pants[2,12] = spr_blank_32x32_25f;
+	sprite_pants[1,12] = spr_blank_32x32_25f;
 
 }

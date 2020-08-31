@@ -1,5 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
+
+
 my_text[0] = "Hello I'm Susan.";
 
 my_colour = c_white

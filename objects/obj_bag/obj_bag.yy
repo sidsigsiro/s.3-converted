@@ -1,8 +1,5 @@
 {
-  "spriteId": {
-    "name": "spr_backpack",
-    "path": "sprites/spr_backpack/spr_backpack.yy",
-  },
+  "spriteId": null,
   "solid": false,
   "visible": true,
   "spriteMaskId": null,

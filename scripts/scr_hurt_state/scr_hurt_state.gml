@@ -79,7 +79,7 @@ function scr_hurt_state(argument0) {
 					image_index = 0;
 					script_execute(inv_equip[0,6]); // set item sprite index
 					state = inv_equip[0, 2];
-					state_sprite = inv_equip[0, 1];
+					state_sprite_item = inv_equip[0, 1];
 				}
 			}
 		}
@@ -93,7 +93,7 @@ function scr_hurt_state(argument0) {
 					image_index = 0;
 					script_execute(inv_equip[1,6]); // set item sprite index
 					state = inv_equip[1, 2];
-					state_sprite = inv_equip[1, 1];
+					state_sprite_item = inv_equip[1, 1];
 				}
 			}
 		}
@@ -107,7 +107,7 @@ function scr_hurt_state(argument0) {
 					image_index = 0;
 					script_execute(inv_equip[2,6]); // set item sprite index
 					state = inv_equip[2, 2];
-					state_sprite = inv_equip[2, 1];
+					state_sprite_item = inv_equip[2, 1];
 				}
 			}
 		}

@@ -12,6 +12,7 @@ function scr_move_state() {
 	character_sheet.stam_regen_active = true;
 	state_charge = 0;
 	state_charge_max = 0;
+	state_sprite_item = noone;
 	state_sprite_item_aim = noone;
 	food_sprite = noone;
 
@@ -51,43 +52,37 @@ function scr_move_state() {
 
 	if key_item_0 {
 		if inv_equip[0,2] != noone { //temporary, should add some unarmed actions for inv_equip[0,2] and inv_equip[1,2]when no item is equipped
-			if inv_equip[0,4] > 0 {
-				if character_sheet.stam > 0 {
-					item_in_use = 0;
-					image_index = 0;
-					script_execute(inv_equip[0,6]); // set item sprite index
-					state = inv_equip[0, 2];
-					state_sprite = inv_equip[0, 1];
-				}
+			if character_sheet.stam > 0 {
+				item_in_use = 0;
+				image_index = 0;
+				script_execute(inv_equip[0,6]); // set item sprite index
+				state = inv_equip[0, 2];
+				state_sprite_item = inv_equip[0, 1];
 			}
 		}
 	}
 
 	if key_item_1 {
 		if  inv_equip[1,2] != noone {
-			if inv_equip[1,4] > 0 {
 				if character_sheet.stam > 0 {
 					item_in_use = 1;
 					image_index = 0;
 					script_execute(inv_equip[1,6]); // set item sprite index
 					state = inv_equip[1, 2];
-					state_sprite = inv_equip[1, 1];
+					state_sprite_item = inv_equip[1, 1];
 				}
-			}
 		}
 	}
 
 	if key_item_2 {
 		if  inv_equip[2,2] != noone {
-			if inv_equip[2,4] > 0 {
 				if character_sheet.stam > 0 {
 					item_in_use = 2;
 					image_index = 0;
 					script_execute(inv_equip[2,6]); // set item sprite index
 					state = inv_equip[2, 2];
-					state_sprite = inv_equip[2, 1];
+					state_sprite_item = inv_equip[2, 1];
 				}
-			}
 		}
 	}
 
