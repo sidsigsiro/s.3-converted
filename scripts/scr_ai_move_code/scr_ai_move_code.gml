@@ -4,16 +4,25 @@
 ///@param {} vector_to
 function scr_ai_move_code(argument0, argument1) {
 
-
+	var tar = argument1
 	if argument1 != noone {
-		if state = scr_move_state or state = scr_run_state {
+		if (state = scr_move_state or state = scr_run_state) {
+
 			haxis = 1;
 			vaxis = 1;
-		
-			mp_potential_path(my_path, argument1.x, argument1.y, 1, 4, false);
-			path_start(my_path, 1, path_action_stop, true);
+			
+			auto_path = true;
+			
+				var path_tarx = (ai_target.x div 16) * 16 + 8
+	var path_tary = (ai_target.y div 16) * 16 + 8
+
+	if (mp_grid_path(my_grid, my_path, x, y, path_tarx, path_tary, 1)) {
+		path_start(my_path, spd, path_action_stop, false);
+	}
+			
 		} else {
 			path_end();
+			auto_path = false;
 			ai_target_vector = (point_direction(argument0.x, argument0.y, argument1.x, argument1.y));
 		
 			if ai_target_vector < 91 and ai_target_vector > 89 {
@@ -57,6 +66,9 @@ function scr_ai_move_code(argument0, argument1) {
 			scr_check_input_axis_ai();
 		}
 	}
+
+
+	
 	//make sure to delete path when it's not in use
 
 	/*

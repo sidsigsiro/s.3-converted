@@ -2,10 +2,10 @@
 function scr_stun_state() {
 	state_num = 4;
 
-	ai_status = ai_status_stun;
+	ai_status = scr_ai_status_stun;
 
 	if alarm[0] = -1 {
-		alarm[0] = global.game_speed * 2;
+		alarm[0] = game_speed * 2;
 	}
 
 	if alarm[0] = 100 {

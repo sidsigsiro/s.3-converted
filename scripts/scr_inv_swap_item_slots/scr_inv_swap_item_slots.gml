@@ -6,6 +6,9 @@ function scr_inv_swap_item_slots() {
 		temp6, temp7, temp8, temp9, temp10;
 		
 		var can_swap = true;
+		
+		//to add and subtract bag slots once during for loop
+		var bag_slots_handled = false
 				
 				
 	if inv_item_to_swap_menu = 0 {
@@ -62,6 +65,12 @@ function scr_inv_swap_item_slots() {
 						}
 					} else if inv[inv_item_to_swap, 2] == BAG {
 						if inv_gui_select = 3 {
+							var equip_script = inv[inv_item_to_swap, 6];
+							script_execute(equip_script);
+							if bag_slots_handled = false {
+								scr_inv_slots_add(inv[inv_item_to_swap, 4])
+								bag_slots_handled = true;
+							}
 							inv[inv_item_to_swap, i] = inv_clothes[inv_gui_select, i];
 						} else {
 							can_swap = false;
@@ -102,8 +111,6 @@ function scr_inv_swap_item_slots() {
 		for (var i = 0; i <= global.inv_properties; i++) {
 			if inv_gui_select_menu == 0 {
 				if inv[inv_gui_select, 0] == noone {
-					inv_clothes[inv_item_to_swap, i] = inv[inv_gui_select, i];
-					inv_clothes[inv_item_to_swap, 3] = 0;
 					if inv_clothes[inv_item_to_swap, 2] == HAT {
 						scr_set_sprite_hatless();
 					} else if inv_clothes[inv_item_to_swap, 2] == SHIRT {
@@ -111,7 +118,20 @@ function scr_inv_swap_item_slots() {
 					} else if inv_clothes[inv_item_to_swap, 2] == PANTS {
 						scr_set_sprite_pantless();
 					} else if inv_clothes[inv_item_to_swap, 2] == BAG {
-						scr_set_sprite_bagless();
+						if bag_slots_handled = false {
+							var bag_slots = (inv_clothes[inv_item_to_swap, 4])
+							if inv_gui_select <= (inv_slots) - bag_slots { 
+								scr_inv_slots_remove(bag_slots);
+								scr_set_sprite_bagless();
+							} else {
+								can_swap = false;
+							}
+							bag_slots_handled = true;
+						}
+					}
+					if can_swap = true {
+						inv_clothes[inv_item_to_swap, i] = inv[inv_gui_select, i];
+						inv_clothes[inv_item_to_swap, 3] = 0;
 					}
 				} else {
 					can_swap = false;

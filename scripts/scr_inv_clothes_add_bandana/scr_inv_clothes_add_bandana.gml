@@ -12,7 +12,7 @@ function scr_inv_clothes_add_bandana() {
 	var property_0 = "Bandana",
 		property_1 = spr_bandana_walk_down,
 		property_2 = HAT,
-		property_3 = 30, //current armour
+		property_3 = 1, //current armour
 		property_4 = 1, //max armour
 		property_5 = "a strip of fabric",
 		property_6 = scr_set_sprite_bandana,

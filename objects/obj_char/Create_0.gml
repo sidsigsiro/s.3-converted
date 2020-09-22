@@ -2,6 +2,7 @@
 ///initiate player
 // set sprites
 //create inventory
+game_speed = global.game_speed;
 scr_inv_create(3);
 
 scr_inv_equip_create();
@@ -21,9 +22,32 @@ uni_add_alpha = shader_get_uniform(shd_shade_rgba_blend, "add_alpha");
 //A.I. variables
 ai_target = noone;
 ai_team = BLUE;				//SET IN CREATION CODE
-ai_status = noone;
+ai_status = scr_ai_status_idle;
+ai_status_default = ai_status
 ai_item_state = noone;
 ai_personality = noone;				//SET IN CREATION CODE
+
+my_text_box = 0;
+page = 0;
+
+my_text[0] = "";
+response[0] = "";
+reaction[0] = "";
+
+response_trigger = noone;
+
+
+vision_cone = noone;
+my_path = path_add();
+
+
+
+my_grid = global.grid
+
+auto_path = false;
+mp_potential_settings(30, 10, 6, false);
+ai_melee_range = 15;
+temp_marker = noone;
 
 //target object for interact button
 interact_target = noone;
@@ -54,12 +78,12 @@ scr_set_sprite_pantless();				//SET IN CREATION CODE
 scr_set_sprite_hair();				//SET IN CREATION CODE
 scr_set_sprite_bagless();				//SET IN CREATION CODE
 scr_set_sprite_hatless();				//SET IN CREATION CODE
+melee_slot = noone;
 
 
 //scr_set_sprite_shorts();
 
-character_sheet = obj_character_sheet_1;				//SET IN CREATION CODE
-character_sheet.owner = id;
+
 profile = obj_profile_p1											//SET IN CREATION CODE
 
 face_mod_aim_x = 0;

@@ -5,7 +5,7 @@ function scr_ai_status_reposition() {
 
 	if alarm[2] = -1 {
 		rand = irandom_range(-90, 90)
-		alarm[2] = global.game_speed;
+		alarm[2] = game_speed;
 		var curtarx = x +  lengthdir_x(64, (point_direction(ai_target.x , ai_target.y, x, y) + rand));
 		var curtary = y + lengthdir_y(64, (point_direction(ai_target.x, ai_target.y, x, y) + rand));
 		temp_marker = instance_create_layer(curtarx, curtary, "instance_layer", obj_ai_temp_marker);
@@ -16,7 +16,7 @@ function scr_ai_status_reposition() {
 	}
 
 	if is_hurt = false {
-		scr_ai_move_code(id, temp_marker);
+		scr_ai_move_code(ai_target, id);
 	}
 
 

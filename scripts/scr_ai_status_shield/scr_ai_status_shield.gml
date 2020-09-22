@@ -19,24 +19,24 @@ function scr_ai_status_shield() {
 		path_end();
 		scr_ai_move_code(id, ai_target);
 		var rand = irandom_range(-90, 90)
-		alarm[2] = global.game_speed * 1.7;
+		alarm[2] = game_speed * 1.7;
 	}
 
-
-	if shield_slot = 0 {
-		key_item_0 = 1;
-		key_item_0_held = 1;
-	} else if shield_slot = 1 {
-		key_item_1 = 1;
-		key_item_1_held = 1;
-	} else if shield_slot = 2 {
-		key_item_2 = 1;
-		key_item_2_held = 1;
+	if alarm[2] >= game_speed * 1.6 {
+		scr_ai_move_code(id, ai_target);
+	} else {
+		if shield_slot = 0 {
+			key_item_0 = 1;
+			key_item_0_held = 1;
+		} else if shield_slot = 1 {
+			key_item_1 = 1;
+			key_item_1_held = 1;
+		} else if shield_slot = 2 {
+			key_item_2 = 1;
+			key_item_2_held = 1;
+		}
+		scr_ai_move_code(ai_target, id);
 	}
-
-
-
-	scr_ai_move_code(ai_target, id);
 
 	if alarm[2] = 0 or character_sheet.stam <= 0 {
 		key_item_0_released = 1;

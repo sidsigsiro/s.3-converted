@@ -1,15 +1,15 @@
 ///scr_hop_state
 function scr_hop_state() {
-	spd = 2.3
+	spd = 2.5
 	image_speed = 0
-	hop_time = global.game_speed*.2
+	hop_time = game_speed*.20
 	state_rot = 0
 	state_rot_arm = 0
 	//hbox[0].hbox_active = false; might be cheap and be straight up better than rolling
 
 
 	if alarm[1] = -1 {
-		scr_stam_subtract(20);
+		scr_stam_subtract(15);
 		alarm[1] = hop_time;
 	}
 

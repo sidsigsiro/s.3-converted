@@ -39,6 +39,8 @@ function scr_inv_clothes_drop(argument0) {
 		scr_set_sprite_hatless();
 	} else if argument0 = 3 {
 		scr_set_sprite_bagless();
+		scr_inv_slots_remove(property_4);
+		
 	}
 
 	inv_clothes[argument0, 0] = noone;

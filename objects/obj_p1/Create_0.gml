@@ -25,6 +25,8 @@ ai_status = noone;
 ai_item_state = noone;
 ai_personality = noone;
 
+vision_cone = noone;
+
 //target object for interact button
 interact_target = noone;
 

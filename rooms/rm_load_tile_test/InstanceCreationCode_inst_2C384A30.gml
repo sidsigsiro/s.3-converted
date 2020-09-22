@@ -1,0 +1,4 @@
+scr_initialize_ai_components(BLUE, scr_ai_set_temperment_meanie);
+scr_initialize_character(obj_character_sheet_1, obj_profile_p1)
+scr_initialize_character_sprite(scr_set_sprite_exil, scr_set_sprite_hair)
+scr_inv_item_add_arrow()

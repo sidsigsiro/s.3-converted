@@ -3,7 +3,7 @@
 if owner != noone {
 	if hp = 0 {
 		hp = 1
-		room_restart();
+		room_goto_previous();
 	}
 	
 	max_hp = default_max_hp + fats;
@@ -11,7 +11,7 @@ if owner != noone {
 	if stam_regen_active = true {
 	//refil stamina a second after it's decreased
 		if stam < prev_stam and stam < max_stam + carbs {
-			alarm[0] = global.game_speed;
+			alarm[0] = game_speed;
 		}
 		if stam < (max_stam + carbs) {
 			if alarm[0] == -1 {
@@ -29,9 +29,9 @@ if owner != noone {
 		chest_armour = owner.inv_clothes[1,3];
 		pants_armour = owner.inv_clothes[2,3];
 
-		armour = hat_armour + chest_armour + pants_armour;
+		armour = hat_armour + chest_armour + pants_armour ;
 	} else {
-		alarm[0] = global.game_speed;
+		alarm[0] = game_speed;
 	}
 	
 	if hp < (max_hp) {

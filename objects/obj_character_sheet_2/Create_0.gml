@@ -23,15 +23,29 @@ arm_bot
 
 owner = noone;
 
+game_speed = global.game_speed
+
 //	HEALTH
-hp = 1;
+hp =75;
+default_max_hp = 100
 max_hp = 100;
+fats = 0;
 
 //	STAM
 stam = 100;
 max_stam = 100;
+carbs = 0;
 prev_stam = 5;
 stam_recharge_alarm = 0;
+stam_regen_active = true;
+
+//proteins
+proteins = 0;
+protein_bonus = 0;
+
+//water
+water = 0;
+water_bonus = 0;
 
 // ARMOUR
 armour = 0;

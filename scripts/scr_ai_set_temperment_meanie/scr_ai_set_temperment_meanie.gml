@@ -12,11 +12,6 @@ function scr_ai_set_temperment_meanie() {
 		}
 	}
 
-	if character_sheet.stam < character_sheet.max_stam * 0.05 {
-		ai_status_roll = -1;
-		ai_status = scr_ai_status_reposition;
-	}
-
 	var roll = ai_status_roll;
 
 	if roll > 0 {
@@ -33,8 +28,6 @@ function scr_ai_set_temperment_meanie() {
 			ai_status_roll = -1
 			if alarm[3] < 0 {
 				ai_status = scr_ai_status_dodge;
-			} else {
-				ai_status = scr_ai_status_reposition;
 			}
 		}
 	}

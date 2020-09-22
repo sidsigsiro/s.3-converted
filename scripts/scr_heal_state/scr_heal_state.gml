@@ -24,7 +24,7 @@ function scr_heal_state() {
 
 	var item_spd = 1, heal_amount = 25;
 
-	var alarm_len = global.game_speed*item_spd;
+	var alarm_len = game_speed*item_spd;
 
 	if alarm[0] = -1 {
 		alarm[0] = alarm_len;

@@ -4,7 +4,7 @@
     "path": "sprites/spr_vision_cone/spr_vision_cone.yy",
   },
   "solid": false,
-  "visible": true,
+  "visible": false,
   "spriteMaskId": null,
   "persistent": false,
   "parentObjectId": null,

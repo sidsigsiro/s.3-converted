@@ -1,8 +1,9 @@
 ///scr_interact
 function scr_interact() {
 	if key_interact_released {
-		var item_to_pickup = collision_circle(x, y, 12, obj_pickup, false, true)
-		if alarm[2] > global.game_speed * 0.6 {
+		var interact_range = 25;
+		var item_to_pickup = collision_circle(x, y, interact_range, obj_pickup, false, true)
+		if alarm[2] > game_speed * 0.6 {
 			if item_to_pickup {
 				var is_clothes = true	//assume the item your picking up is clothes unless proven otherwise
 				for(var i = 0; i <= item_to_pickup.inv_clothes_slots; i++) {
@@ -42,13 +43,55 @@ function scr_interact() {
 												item_to_pickup)
 				}
 				alarm[2] = -1;
-			} else if collision_circle(x, y, 25, obj_Container, false,true) {
+			} else if collision_circle(x, y, interact_range, obj_Container, false,true) {
 				interact_target = collision_circle(x, y, 25, obj_Container, false,true);
 				if carried_object == noone {
 					carried_object = interact_target;
 					carried_object.carrier = id;
 					state = scr_carry_state;
 				}
+			} else if collision_circle(x, y, interact_range, obj_sign_post, false, true) {
+				interact_target = collision_circle(x, y, 25, obj_sign_post, false, true);
+				with(interact_target) {
+					alarm[0] = game_speed*6;
+					if my_text_box == noone {
+						my_text_box = instance_create_layer(x, y - 30, "instance_layer", obj_text_box);
+						my_text_box.owner = id;
+						my_text_box.text = my_text;
+					} else {
+						with(my_text_box) {
+							advance_text = true;
+						}
+					}
+				}
+			} else {
+				var _list = ds_list_create();
+				var _num = collision_circle_list(x, y, interact_range, obj_hbox, false, true, _list, true);
+				if _num > 0 {
+					for(var i = 0; i < _num; i++) {
+						if _list[| i].owner != id and _list[| i].owner.ai_team == ai_team {
+							interact_target = _list[| i].owner {
+								if interact_target != id {
+									interact_target.ai_target = id;
+									with(interact_target) {
+										if my_text_box == noone {
+											var string_y_buffer = 30
+											my_text_box = instance_create_layer(x, y - string_y_buffer, "instance_layer", obj_text_box);
+											my_text_box.owner = id;
+											my_text_box.text = my_text;
+											my_text_box.page = page;
+											ai_status = scr_ai_status_talk;
+										} else {
+											with (my_text_box) {
+												advance_text = true;
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				} ds_list_destroy(_list)
 			}
 			alarm[2] = -1;
 		}
@@ -56,10 +99,10 @@ function scr_interact() {
 
 	if key_interact_held {
 		if alarm[2] = -1 {
-			alarm[2] = global.game_speed;
+			alarm[2] = game_speed;
 		}
 		if alarm[2] = 0 {
-			if collision_circle(x, y, 25, obj_Container, false,true) {
+			if collision_circle(x, y, interact_range, obj_Container, false,true) {
 				interact_target = collision_circle(x, y, 25, obj_Container, false,true);
 				with(interact_target) {
 					scr_inv_item_drop_all();

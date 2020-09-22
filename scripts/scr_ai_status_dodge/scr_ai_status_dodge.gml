@@ -15,7 +15,7 @@ function scr_ai_status_dodge() {
 	}
 
 	if state = scr_dive_state or character_sheet.stam <= 0 {
-		alarm[3] = global.game_speed * 5;
+		alarm[3] = game_speed * 5;
 		ai_status = scr_ai_status_roll_new;
 	}
 

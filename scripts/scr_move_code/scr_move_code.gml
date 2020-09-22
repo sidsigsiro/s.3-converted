@@ -8,15 +8,16 @@ function scr_move_code(argument0) {
 		}
 	}
 
-	if ai_pathing = false {
+	if ai_pathing = false  {
 		var xtarg = x+lengthdir_x(spd,argument0);
 		var ytarg = y+lengthdir_y(spd,argument0);
 
-		if place_free(xtarg,ytarg) {
+		if !place_meeting(xtarg,ytarg, obj_wall) {
+			
 			x = xtarg;
 			y = ytarg;
+			
 		} else {
-		
 			var sweep_interval = 10;
 
 			for (var angle = sweep_interval; angle <= 80; angle += sweep_interval) {
@@ -24,7 +25,7 @@ function scr_move_code(argument0) {
 					var angle_to_check = argument0+angle*multiplier;
 					xtarg = x+lengthdir_x(spd, angle_to_check);
 					ytarg = y+lengthdir_y(spd, angle_to_check);     
-					if place_free(xtarg,ytarg) {
+					if !place_meeting(xtarg,ytarg, obj_wall) {
 						x = xtarg;
 						y = ytarg;  
 						exit;       

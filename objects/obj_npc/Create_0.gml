@@ -51,6 +51,7 @@ vision_cone = noone;
 
 my_path = path_add();
 pm = 0; //patrol marker
+
 temp_marker = noone;
 
 //target object for interact button
@@ -84,7 +85,6 @@ scr_set_sprite_hairless();
 scr_set_sprite_bagless();
 scr_set_sprite_hatless();
 
-//scr_inv_item_add_spear();
 
 scr_inv_item_add_bow();
 

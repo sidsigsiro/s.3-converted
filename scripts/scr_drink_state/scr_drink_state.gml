@@ -39,7 +39,7 @@ function scr_drink_state() {
 
 	var item_spd = 1;
 
-	var alarm_len = global.game_speed*item_spd;
+	var alarm_len = game_speed*item_spd;
 
 	if alarm[0] = -1 {
 		alarm[0] = alarm_len;

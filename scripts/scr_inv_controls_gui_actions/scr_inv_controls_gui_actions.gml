@@ -98,7 +98,11 @@ function scr_inv_controls_gui_actions() {
 				text_box_menu_actions = noone;
 				inv_gui_actions = false
 			} else if text_act.my_text[text_act.page] = "Drop" {
-				scr_inv_item_drop(inv_gui_select)
+				if inv_gui_select_menu != 2 {
+					scr_inv_item_drop(inv_gui_select)
+				} else {
+					scr_inv_clothes_drop(inv_gui_select);
+				}
 				//close actions text box
 				instance_destroy(text_box_menu_actions);
 				text_box_menu_actions = noone;

@@ -12,7 +12,7 @@ function scr_inv_clothes_add_shorts() {
 	var property_0 = "Shorts",
 		property_1 = spr_shorts_down,
 		property_2 = PANTS,
-		property_3 = 33, //current armour
+		property_3 = 1, //current armour
 		property_4 = 5, //max armour
 		property_5 = "Ill fitted shorts",
 		property_6 = scr_set_sprite_shorts,

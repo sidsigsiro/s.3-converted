@@ -12,7 +12,7 @@ function scr_ai_status_pickup() {
 		scr_ai_move_code(id, ai_target_interact);
 		if point_distance(x, y, ai_target_interact.x, ai_target_interact.y) <= 10 {
 			if alarm[2] == -1 {
-				alarm[2] = global.game_speed;
+				alarm[2] = game_speed
 			}
 			key_interact_released = 1;
 		}

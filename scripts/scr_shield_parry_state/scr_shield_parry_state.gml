@@ -4,7 +4,7 @@ function scr_shield_parry_state() {
 	state_num = 10;
 	scr_check_face();
 	if alarm[0] == -1 {
-		alarm[0] = global.game_speed / 2;
+		alarm[0] = game_speed / 2;
 		spd = 2;
 	}
 	if spd > 0 {

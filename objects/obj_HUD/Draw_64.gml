@@ -10,6 +10,12 @@ bar_size,
 bar_alpha = 1,
 char_sheet;
 
+	// lighting camera shenanigans (copied from composite_shadow_map
+	var camera = lighting_get_active_camera();
+	var cameraX = camera[eLightingCamera.X];
+	var cameraY = camera[eLightingCamera.Y];
+	var cameraW = camera[eLightingCamera.Width];
+	var cameraH = camera[eLightingCamera.Height];
 
 
 //player 1 HUD
@@ -33,7 +39,7 @@ if instance_exists(obj_character_sheet_1) {
 			y_offset = (sprite_get_height(spr_hud_bars_outline) * 2);
 		}
 		
-		draw_sprite_ext(spr_hud_bars_outline, sub_img, (camera_get_view_x(0) + 12), camera_get_view_y(0) + (12 + y_offset),
+		draw_sprite_ext(spr_hud_bars_outline, sub_img, (cameraX + 12), cameraY + (12 + y_offset),
 		bar_size, 1, 0, c_white, bar_alpha);
 		}
 	
@@ -104,7 +110,7 @@ if instance_exists(obj_character_sheet_1) {
 			bar_size = char_sheet.water / 100;
 		} else if i == 8 {
 			bar_size = char_sheet.armour / 100;
-			bar_alpha = 1;
+			bar_alpha = 0;
 		} else if i == 9 {
 			x_offset = ((sprite_get_width(spr_hud_bars) / 100) * char_sheet.carbs) - 2;
 			if char_sheet.carbs > 0 {
@@ -114,8 +120,17 @@ if instance_exists(obj_character_sheet_1) {
 			}
 			bar_size = 1;
 		}
-		draw_sprite_ext(spr_hud_bars, sub_img, (camera_get_view_x(0) + 13) + x_offset, camera_get_view_y(0) + (12 + y_offset),
+		draw_sprite_ext(spr_hud_bars, sub_img, (cameraX + 13) + x_offset, cameraY + (12 + y_offset),
 		bar_size, 1, 0, c_white, bar_alpha);
+		
+		draw_set_halign(fa_left);
+		draw_set_font(Font2);
+		
+		draw_set_color(c_black);
+		draw_text(((cameraX + 13) + (sprite_get_width(spr_hud_bars) + 5)), cameraY + 10, "% " + string(char_sheet.armour));
+		
+		draw_set_color(c_white);
+		draw_text(((cameraX + 13) + (sprite_get_width(spr_hud_bars) + 4)), cameraY + 9, "% " + string(char_sheet.armour));
 		
 	}
 }

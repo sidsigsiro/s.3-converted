@@ -1,15 +1,21 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-
 if advance_text == true {
 	if (char_count < string_length(text[page])) {
 		char_count = string_length(text[page]);
 	} else if (page +1 < array_length_1d(text)) {
-		page += 1;
-		char_count = 0;
+		if text[page+1] = "\n" {
+			owner.page = page+2;
+			owner.my_text_box = noone;
+			instance_destroy();
+		} else {
+			page += 1;
+			char_count = 0;
+		}
 	} else {
-		//creator.my_text_bot = noone; after alarm potentially
+		owner.page = 0;
+		owner.my_text_box = noone;
 		instance_destroy();
 	}
 	advance_text = false;

@@ -41,7 +41,7 @@ function scr_hbox_shield_hurt() {
 								if shield_to_hit_vec < shield_to_player_vec_plus and shield_to_hit_vec > shield_to_player_vec_min {
 									owner.character_sheet.stam -= damage;
 									knock_back_spd = hbox_touched.stat_0 * 0.1;
-									knock_back_vector = owner.aim;
+									knock_back_vector = -(owner.face*90);
 									with(owner) {
 										kc_spd += knock_back_spd;
 										kc_dir = knock_back_vector;

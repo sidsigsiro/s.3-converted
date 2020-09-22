@@ -12,7 +12,7 @@ function scr_inv_clothes_add_shirt() {
 	var property_0 = "Shirt",
 		property_1 = spr_shirt_down,
 		property_2 = SHIRT, //type / action of the item
-		property_3 = 33, //current armour
+		property_3 = 2, //current armour
 		property_4 = 5, //max armour
 		property_5 = "A tattered wool shirt",
 		property_6 = scr_set_sprite_shirt,

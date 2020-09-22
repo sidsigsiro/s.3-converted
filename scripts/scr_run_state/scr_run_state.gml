@@ -9,7 +9,7 @@ function scr_run_state() {
 
 	if (haxis != 0 or vaxis != 0) {
 		scr_stam_subtract(0.3);
-		image_speed = global.game_speed/320
+		image_speed = game_speed/320
 		scr_move_code(dir);
 	} else {
 		state = state_default;

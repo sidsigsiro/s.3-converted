@@ -1,12 +1,16 @@
 ///scr_ai_status_attack_melee
 function scr_ai_status_attack_melee() {
+	
+	key_item_0 = 0;
+	key_item_1 = 0;
+	key_item_2 = 0;
 
 	if ai_target != noone {
 		scr_ai_move_code(id, ai_target)
 
-		if alarm[2] = -1 {
-			alarm[2] = global.game_speed * 5
-		}
+		//if alarm[2] = -1 {
+			//alarm[2] = game_speed * 5
+		//}
 
 		if melee_slot = noone {
 			if scr_ai_status_check_nearest_pickup(scr_spear_state) = true {
@@ -25,6 +29,8 @@ function scr_ai_status_attack_melee() {
 				key_item_2 = 1;
 			}
 		}
+
+		
 
 		if key_item_0 = 1 or key_item_1 = 1 or key_item_2 = 1 {
 			if state = scr_move_state {

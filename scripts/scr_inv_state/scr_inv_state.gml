@@ -11,8 +11,9 @@ function scr_inv_state() {
 	
 
 	if text_box_item_name == noone {
-		var string_y_buffer = (sprite_get_height(spr_inventory_GUI) / 2) + 13
+		var string_y_buffer = (sprite_get_height(spr_inventory_GUI) / 2) + 13;
 		text_box_item_name = instance_create_layer(inv_x, inv_y - string_y_buffer, "instance_layer", obj_text_box);
+		text_box_item_name.owner = id;
 		text_box_item_name.depth = depth - 1;
 	}
 	
@@ -20,7 +21,7 @@ function scr_inv_state() {
 	
 	//INV_MENU
 	if inv_gui_actions = false {
-		scr_inv_controls_main()
+		scr_inv_controls_main();
 	} else {
 		//open up more actions if player isn't trying to currently move an item
 		if inv_is_swapping = false {

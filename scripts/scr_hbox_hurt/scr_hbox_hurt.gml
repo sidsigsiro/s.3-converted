@@ -31,6 +31,11 @@ function scr_hbox_hurt() {
 									kc_spd += damage*0.1;
 									kc_dir = knock_back_vector;
 									ai_target = new_ai_target
+									ai_team += 1;
+									if my_text_box != noone {
+										instance_destroy(my_text_box)
+										my_text_box = noone;
+									}
 									is_hurt = true;
 								}
 								if hbox_touched.is_projectile == true { //knock back projectile
@@ -57,6 +62,11 @@ function scr_hbox_hurt() {
 									kc_spd += damage*0.1;
 									kc_dir = knock_back_vector;
 									ai_target = new_ai_target
+									ai_team += 1;
+									if my_text_box != noone {
+										instance_destroy(my_text_box)
+										my_text_box = noone;
+									}
 									is_hurt = true;
 								}
 								if hbox_touched.is_projectile = true { //knock back projectile

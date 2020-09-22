@@ -66,7 +66,7 @@ function scr_spear_charged_state() {
 	face_mod_aim_rot = aim;
 
 
-	state_charge_max = global.game_speed*0.8;
+	state_charge_max = game_speed*0.8;
 
 
 	xdir = (lengthdir_x(15, aim) + x_align); //len is distance between center of player sprite and center of spear in attacking frame of animation
@@ -74,13 +74,13 @@ function scr_spear_charged_state() {
 
 	if key_item_held {
 		state_sprite_item_aim = inv_equip[item_in_use, 1]
-		alarm[1] = global.game_speed*0.3;
-		alarm[0] = global.game_speed
+		alarm[1] = game_speed*0.3;
+		alarm[0] = game_speed
 		state_num = 8;
 		draw_item_aim = true;
 		state_charge += 1;
 		if haxis != 0 or vaxis != 0 {
-			image_speed = global.game_speed/720
+			image_speed = game_speed/720
 			scr_move_code(dir);
 		} else {
 			image_speed = 0;
@@ -88,8 +88,8 @@ function scr_spear_charged_state() {
 		}
 		if key_run_pressed {
 			state_charge = 0;
-			alarm[1] = 0;
-			alarm[0] = 0;
+			alarm[1] = -1
+			alarm[0] = -1
 			state = state_default;
 		}
 	}
@@ -97,8 +97,8 @@ function scr_spear_charged_state() {
 	if key_item_released {
 		if state_charge < state_charge_max {
 			state_charge = 0;
-			alarm[1] = 0;
-			alarm[0] = 0;
+			alarm[1] = -1
+			alarm[0] = -1
 			state = state_default;
 		} else {
 			if character_sheet.stam > 0 {
@@ -124,6 +124,8 @@ function scr_spear_charged_state() {
 			speed = 0.1;
 		}
 		item_thrown = noone;
+		alarm[1] = -1
+		alarm[0] = -1
 		state = state_default;
 	}
 

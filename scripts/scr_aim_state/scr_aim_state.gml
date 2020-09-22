@@ -61,7 +61,7 @@ function scr_aim_state() {
 					var stam_cost = inv_equip[item_thrown_slot, 4] + (inv_equip[item_thrown_slot, 4] * 0.5)
 					scr_stam_subtract(stam_cost);
 					scr_inv_item_throw(item_thrown_slot);
-					alarm[1] = global.game_speed*0.3;
+					alarm[1] = game_speed*0.3;
 				}
 			}
 		}
@@ -72,7 +72,7 @@ function scr_aim_state() {
 	/*if key_item_1 {
 		if inv_equip[1, 0] != noone {
 			if alarm[1] = -1 {
-				alarm[1] = global.game_speed*0.3;
+				alarm[1] = game_speed*0.3;
 				image_index = 1;
 				draw_item_aim = false;
 				scr_inv_item_throw(item_thrown_slot);

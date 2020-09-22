@@ -34,10 +34,12 @@ function scr_ai_status_roll_new() {
 
 
 	if state = scr_move_state {
+		
 		scr_ai_move_code(id, ai_target)
 		alarm[2] = -1;
 		ai_status_roll = irandom(100);
 		script_execute(ai_personality);
+		
 	}
 
 

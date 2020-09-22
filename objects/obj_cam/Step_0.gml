@@ -1,8 +1,8 @@
 ///camera step
 
-dir = point_direction(x, y, obj_p1.x, obj_p1.y);
+dir = point_direction(x, y, obj_char.x, obj_char.y);
 
-spd = (point_distance(x, y, obj_p1.x, obj_p1.y)/20);
+spd = (point_distance(x, y, obj_char.x, obj_char.y)/20);
 
 hspd = lengthdir_x(spd, dir);
 

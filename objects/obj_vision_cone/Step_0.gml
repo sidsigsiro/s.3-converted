@@ -8,9 +8,13 @@ if _num > 0 {
 		or owner.ai_status == scr_ai_status_patrol 
 		or owner.ai_status == scr_ai_status_investigate {
 			if _list[| i].owner != owner {
-				if _list[| i].hbox_script == scr_hbox_hurt {
-					owner.ai_target = _list[| i];
-					owner.ai_status = scr_ai_status_attack_melee;
+				if !collision_line(owner.x, owner.y, _list[| i].x, _list[| i].y, obj_wall, true, true) {
+					if _list[| i].hbox_script == scr_hbox_hurt {
+						if _list[| i].owner.ai_team != owner.ai_team {
+							owner.ai_target = _list[| i];
+							owner.ai_status = scr_ai_status_attack_melee;
+						}
+					}
 				}
 			} 
 		}

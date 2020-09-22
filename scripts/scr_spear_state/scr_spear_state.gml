@@ -50,7 +50,7 @@ function scr_spear_state() {
 
 	if alarm[0] = -1 {
 		scr_stam_subtract(inv_equip[item_in_use, 4]);
-		alarm[0] = global.game_speed*item_spd;
+		alarm[0] = game_speed*item_spd;
 
 	}
 
@@ -62,7 +62,7 @@ function scr_spear_state() {
 		spd = 0;
 	}
 
-	var alarm_len = global.game_speed*item_spd;
+	var alarm_len = game_speed*item_spd;
 
 	///frames of animation = [2] * number of frames of animation, image_number doesn't work du to object having no assigned sprite.
 	image_speed = 2 / alarm_len;

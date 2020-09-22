@@ -1,5 +1,5 @@
 ///player step
-scr_check_depth();
+//scr_check_depth();
 //	BUTTON CHECK
 script_execute(profile.input_profile);
 //	CHECK FOR INPUT AXIS
@@ -66,3 +66,5 @@ if is_hurt == false {
 
 scr_knockback();
 //fix sub pixel movement
+
+script_execute(scr_ai_sight_cone);

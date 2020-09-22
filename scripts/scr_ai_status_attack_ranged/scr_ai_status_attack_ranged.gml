@@ -4,7 +4,7 @@ function scr_ai_status_attack_ranged() {
 	path_end();
 
 	if alarm[2] == -1 {
-		alarm[2] = global.game_speed*0.5
+		alarm[2] = game_speed*0.5
 	}
 
 	if ranged_slot = noone {

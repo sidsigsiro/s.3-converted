@@ -48,7 +48,7 @@ function scr_bow_state() {
 
 	var item_spd = .60;
 
-	var alarm_len = global.game_speed*item_spd;
+	var alarm_len = game_speed*item_spd;
 
 	if alarm[0] = -1 {
 		alarm[0] = alarm_len;

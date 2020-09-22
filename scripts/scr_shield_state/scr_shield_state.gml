@@ -47,7 +47,7 @@ function scr_shield_state() {
 
 	if (haxis != 0 or vaxis != 0) {
 	
-		image_speed = global.game_speed/720;
+		image_speed = game_speed/720;
 	
 		scr_move_code(dir);
 

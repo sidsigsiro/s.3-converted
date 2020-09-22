@@ -16,6 +16,8 @@ room_speed = global.game_speed //use room_speed to temporarily change frame rate
 physics_world_create(1.3/32)
 physics_world_update_speed(global.game_speed)
 physics_world_update_iterations(30)
+draw_set_font(Font1);
+draw_set_halign(fa_center);
 
 global.inv_properties = 10;
 

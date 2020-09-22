@@ -25,7 +25,7 @@ draw_sprite_ext(sprite_leg_bot[face,state_num],image_index,x,y,1,1,state_rot,c_w
 //bag mid
 draw_sprite_ext(sprite_bag[face,state_num],image_index,x,y,1,1,state_rot,c_white,1);
 //item mid
-draw_sprite_ext(sprite_item_mid[face,state_num],image_index,x,y,1,1,state_rot,c_white,1);
+draw_sprite_ext(sprite_item_mid[face,state_num],image_index,x,y,1,1,state_rot_arm,c_white,1);
 //head bot
 draw_sprite_ext(sprite_head_bot[face,state_num],image_index,x,y,1,1,state_rot,c_white,1);
 //hair bot

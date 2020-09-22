@@ -2,6 +2,8 @@
 // You can write your code in this editor
 event_inherited();
 
+game_speed = global.game_speed
+
 scr_inv_create(3);
 
 scr_inv_equip_create_full();

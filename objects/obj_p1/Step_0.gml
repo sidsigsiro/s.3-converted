@@ -64,5 +64,7 @@ if is_hurt == false {
 	scr_hurt_state(hurt_damage);
 }
 
+script_execute(scr_ai_sight_cone)
+
 scr_knockback();
 //fix sub pixel movement

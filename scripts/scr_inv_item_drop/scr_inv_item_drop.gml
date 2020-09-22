@@ -14,7 +14,7 @@ function scr_inv_item_drop(argument0) {
 		property_9,
 		property_10,
 
-	if inv_gui_select_menu = 0 or inv_gui_select_menu = 2 {
+	if inv_gui_select_menu = 0 {
 		//drop item from inventory slot
 		property_0 = inv[argument0, 0];
 		property_1 = inv[argument0, 1];
@@ -43,23 +43,56 @@ function scr_inv_item_drop(argument0) {
 		property_9 = inv_equip[argument0, 9];
 		property_10 = inv_equip[argument0, 10];
 	}
+	
+	if inv_gui_select_menu = 2 {
+		property_0 = inv_clothes[argument0, 0];
+		property_1 = inv_clothes[argument0, 1];
+		property_2 = inv_clothes[argument0, 2];
+		property_3 = inv_clothes[argument0, 3];
+		property_4 = inv_clothes[argument0, 4];
+		property_5 = inv_clothes[argument0, 5];
+		property_6 = inv_clothes[argument0, 6];
+		property_7 = inv_clothes[argument0, 7];
+		property_8 = inv_clothes[argument0, 8];
+		property_9 = inv_clothes[argument0, 9];
+		property_10 = inv_clothes[argument0, 10];
+	}
 
 
 	var dropped_item = instance_create_layer(x, y, "instance_layer", obj_pickup);
-
-	with(dropped_item) {
-		scr_inv_item_add(property_0, 
-										property_1,
-										property_2,
-										property_3,
-										property_4,
-										property_5,
-										property_6,
-										property_7,
-										property_8,
-										property_9,
-										property_10,
-										noone)
+	
+	if property_2 == HAT or property_2 == SHIRT
+	or property_2 == PANTS or property_2 == BAG {
+		with(dropped_item) {
+			//add to clothes slot if they are clothes
+			scr_inv_clothes_add(property_0, 
+									   property_1,
+									   property_2,
+									   property_3,
+									   property_4,
+									   property_5,
+									   property_6,
+									   property_7,
+									   property_8,
+									   property_9,
+									   property_10,
+									   noone)
+		}
+	} else {
+		with(dropped_item) {
+			scr_inv_item_add(property_0, 
+											property_1,
+											property_2,
+											property_3,
+											property_4,
+											property_5,
+											property_6,
+											property_7,
+											property_8,
+											property_9,
+											property_10,
+											noone)
+		}
 	}
 
 
@@ -82,6 +115,13 @@ function scr_inv_item_drop(argument0) {
 		//empty item from equip slot
 		for(var i = 0; i <= global.inv_properties; i++) {
 			inv_equip[argument0, i] = noone;
+		}
+	}
+	
+	if inv_gui_select_menu == 2 {
+		//empty item from clothes slot
+		for(var i = 0; i <= global.inv_properties; i++) {
+			inv_clothes[argument0, i] = noone;
 		}
 	}
 

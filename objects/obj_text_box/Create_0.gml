@@ -1,6 +1,6 @@
 /// @description Insert description here
 // You can write your code in this editor
-
+owner = noone;
 
 my_text[0] = "Hello I'm Susan.";
 

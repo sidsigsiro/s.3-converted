@@ -35,6 +35,7 @@ function scr_inv_clothes_add_bag() {
 		inv_clothes[3, 9] = property_9;
 		inv_clothes[3, 10] = property_10;
 		script_execute(property_6)
+		scr_inv_slots_add(property_4)
 	} else {
 		///check inventory slots and adds one to empty slot
 		for(var i = 0; i <= inv_slots; i += 1) {
@@ -50,6 +51,7 @@ function scr_inv_clothes_add_bag() {
 				inv[i, 8] = property_8;
 				inv[i, 9] = property_9;
 				inv[i, 10] = property_10;
+				scr_inv_slots_add(property_4)
 				break;
 		
 			} else {
